@@ -1,7 +1,7 @@
 #!/bin/bash
 file=$1
 counter=0
-out="oddfile.$$"
+out="oddfile.txt"
 while read line
 do
 isEvenNo=$( expr $counter % 2 )
