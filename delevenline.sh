@@ -1,15 +1,15 @@
 #!/bin/bash
 file=$1
 counter=0
-out="oddfile.txt"
+output="oddfile.txt"
 while read line
 do
 isEvenNo=$( expr $counter % 2 )
 if [ $isEvenNo -eq 0 ] 
 then
-echo $line >> $out
+echo $line >> $output
 fi
 (( counter ++ ))
 done < $file
 /bin/rm -f $file
-/bin/mv $out $file
+/bin/mv $output $file
