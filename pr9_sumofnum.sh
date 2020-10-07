@@ -7,4 +7,4 @@ mod=$((n % 10))
 s=$((s + mod))
 n=$((n / 10))
 done
-echo "The sum of numbers in $n is $s"
+echo "The sum of digits in $n is $s"
