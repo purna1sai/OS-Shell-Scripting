@@ -5,11 +5,11 @@ for f in $d2/*
 do
 if [ -f $f ]
 then
-tFile="$d1/$(basename $f)"
-if [ -f $tFile ]
+tF="$d1/$(basename $f)"
+if [ -f $tF ]
 then
-echo -n "Deleting $tFile..."
-/bin/rm $tFile
+echo -n "Deleting $tF..."
+/bin/rm $tF
 [ $? -eq 0 ] && echo "done" || echo "failed"
 fi
 fi
