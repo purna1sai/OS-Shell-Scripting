@@ -1,6 +1,6 @@
 #!/bin/bash
 STR1=$1
-STR1=$2
+STR2=$2
 OUT="$1$2"
 if [ $# -eq 0 ]
 then
