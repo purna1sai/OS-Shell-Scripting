@@ -1,6 +1,6 @@
 #!/bin/bash
 file=$1
-a=0 
+x=0 
 if [ $# -ne 1 ]
 then
 	echo "$0 fileName"
@@ -15,8 +15,10 @@ while read line
 do
   l=$(echo $line | tr [:upper:] [:lower:])
 for word in $l
-do
-	[[ $word == "a" || $word == "an" || $word == "the" ]] && ((a++))
+if [[$word == "a"] || [$word == "an"] || [$word == "the"]] 
+then
+	((x++))
+fi
 done
 done < $file
-echo "articles : $a"
+echo "articles : $x"

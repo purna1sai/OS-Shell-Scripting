@@ -1,8 +1,12 @@
 #!/bin/bash
+function usr()
+{
+	echo "*************************************************"
+}
 echo "Your username : $(echo $USER)"
-echo "*************************************************"  
+usr # call function
 echo "Current date and time : $(date)"
-echo "*************************************************"
+usr
 echo "Currently logged on users:"
 who
-echo "*************************************************"
+usr

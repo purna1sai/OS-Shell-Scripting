@@ -10,5 +10,5 @@ read num
 sum=$((sum + num))
 i=$((i + 1))
 done
-avg=$(echo $sum / $N | bc -l)
-echo $avg
+calc() { awk "BEGIN{print $*}"; }
+ calc $sum / $N
